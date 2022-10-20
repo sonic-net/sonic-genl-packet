@@ -1,0 +1,1 @@
+cmd_/home/dnewton/src/sonic-genl-packet/kernel_module/kernel_group.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /home/dnewton/src/sonic-genl-packet/kernel_module/kernel_group.ko /home/dnewton/src/sonic-genl-packet/kernel_module/kernel_group.o /home/dnewton/src/sonic-genl-packet/kernel_module/kernel_group.mod.o;  true
