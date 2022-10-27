@@ -1,1 +1,0 @@
-cmd_/home/dnewton/src/sonic-genl-packet/kernel_module/kernel_group.mod := { echo  /home/dnewton/src/sonic-genl-packet/kernel_module/kernel_group.o;  echo; } > /home/dnewton/src/sonic-genl-packet/kernel_module/kernel_group.mod

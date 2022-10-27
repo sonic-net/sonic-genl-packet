@@ -1,1 +1,0 @@
-cmd_/home/dnewton/src/sonic-genl-packet/kernel_module/Module.symvers := sed 's/\.ko$$/\.o/' /home/dnewton/src/sonic-genl-packet/kernel_module/modules.order | scripts/mod/modpost -m -a  -o /home/dnewton/src/sonic-genl-packet/kernel_module/Module.symvers -e -i Module.symvers   -T -
