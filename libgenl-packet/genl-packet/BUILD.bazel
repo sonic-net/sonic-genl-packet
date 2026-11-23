@@ -7,7 +7,10 @@ exports_files(["LICENSE"])
 cc_library( 
     name = "genl_packet",
     srcs = ["receive_genetlink.cc", ],
-    copts = ["-I/usr/include/libnl3"],
+    copts = ["-I/usr/include/libnl3"] + select({
+        "//:x86_64": ["-fcf-protection=full"],
+        "//conditions:default": [],
+    }),
     linkopts = [
         "-lnl-3",
         "-lnl-genl-3"

@@ -6,6 +6,10 @@ exports_files(["LICENSE"])
 cc_binary(
     name = "sniffer",
     srcs = ["sniffer.cc"],
+    copts = select({
+        "//:x86_64": ["-fcf-protection=full"],
+        "//conditions:default": [],
+    }),
     deps = [
 	    "//libgenl-packet/genl-packet:genl_packet",
 	    "@com_github_pcapplusplus//:pcap",
@@ -27,7 +31,10 @@ cc_binary(
     copts = [
         "-I",
         "/usr/include/libnl3/",
-    ],
+    ] + select({
+        "//:x86_64": ["-fcf-protection=full"],
+        "//conditions:default": [],
+    }),
     linkopts = [
         "-lnl-3",
         "-lnl-genl-3"
