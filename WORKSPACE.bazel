@@ -34,9 +34,10 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
       name = "com_github_pcapplusplus",
-      urls = ["https://github.com/seladb/PcapPlusPlus/archive/refs/heads/master.zip"],
+      urls = ["https://github.com/seladb/PcapPlusPlus/archive/refs/tags/v22.11.zip"],
+      sha256 = "b2646e2895dbffe9a96ccf56f52706f66b15ae63ee0606f53e32426096d58f7b",
       build_file = "@//:ppp.BUILD",
-      strip_prefix = "PcapPlusPlus-master",
+      strip_prefix = "PcapPlusPlus-22.11",
   )
 
 http_archive(
