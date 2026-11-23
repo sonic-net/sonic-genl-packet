@@ -1,0 +1,11 @@
+# Apply to both the library and tools, including builds launched by their Makefiles.
+build --copt=-O2
+build --copt=-D_FORTIFY_SOURCE=3
+build --copt=-fstack-protector-strong
+build --copt=-fstack-clash-protection
+build --copt=-fcf-protection=full
+build --copt=-Wformat
+build --copt=-Werror=format-security
+build --linkopt=-Wl,-z,relro
+build --linkopt=-Wl,-z,now
+build --linkopt=-Wl,-z,noexecstack
